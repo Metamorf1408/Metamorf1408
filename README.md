@@ -1,16 +1,26 @@
-### Hi there 👋
+    function Block(latter, beatle, used, mom, code) {
+        this.latter = latter;
+        this.rate = beatle;
+        this.used = used;
+        this.mom = mom;
+        this.code = code;
+}
 
-<!--
-**Metamorf1408/Metamorf1408** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+function FindCode(Block) {
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+if (tree[block.mom].code !='') {
+  block.code = tree[block.mom].code + '1';
+}
+  else {
+  if (block.latter == tree[minIndex].latter) {
+    block.code = '0';
+  }
+       else if (block.latter == tree[preminIndex].latter) {
+    block.code = '1';
+  }
+       else {
+       FindCode(tree[block.mom]);
+       block.code = tree[block.mom].code + '0';
+  }
+ }
+}
